@@ -5,3 +5,6 @@ __pycache__/
 .env
 .DS_Store
 Thumbs.db
+
+# Site-specific bulk-upload files for the private admin panel
+bulk-upload/

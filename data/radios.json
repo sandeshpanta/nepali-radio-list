@@ -2576,17 +2576,6 @@
       "checked_at": "2026-10-31"
     },
     {
-      "id": "24-nepali-online-radio",
-      "name": "24 Nepali Online Radio",
-      "province": "World",
-      "frequency": null,
-      "address": null,
-      "stream_url": "http://node-25.zeno.fm/v3e78tqm5gruv.aac",
-      "logo": "logos/24-nepali-online-radio.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
       "id": "bbc-world-service-english",
       "name": "BBC World Service English",
       "province": "World",
@@ -2594,105 +2583,6 @@
       "address": "London, UK",
       "stream_url": "https://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_vlow/ak/bbc_world_service_news_internet.m3u8",
       "logo": "logos/bbc-world-service-english.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "bfbs-gurkha-radio",
-      "name": "BFBS Gurkha Radio",
-      "province": "World",
-      "frequency": null,
-      "address": null,
-      "stream_url": "http://edge-audio-03-gos2.sharp-stream.com/ssvcbfbs3.mp3",
-      "logo": "logos/bfbs-gurkha-radio.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "bodhi-fm",
-      "name": "BODHI FM",
-      "province": "World",
-      "frequency": null,
-      "address": "Texas, USA",
-      "stream_url": "http://216.55.141.189:8721/;",
-      "logo": "logos/bodhi-fm.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "nepali-sanchar-radio",
-      "name": "Nepali Sanchar Radio",
-      "province": "World",
-      "frequency": null,
-      "address": "Melbourne, VIC, Australia",
-      "stream_url": "http://onlineradio.websoftitnepal.com:8048/;",
-      "logo": "logos/nepali-sanchar-radio.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "qn-radio",
-      "name": "QN Radio",
-      "province": "World",
-      "frequency": null,
-      "address": "Doha, Qatar",
-      "stream_url": "http://216.55.141.189:8060/;",
-      "logo": "logos/qn-radio.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-energy-106-2-mhz",
-      "name": "Radio Energy 106.2 MHz",
-      "province": "World",
-      "frequency": 106.2,
-      "address": null,
-      "stream_url": "http://streaming.hamropatro.com:8799/;",
-      "logo": "logos/radio-energy-106-2-mhz.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-highway",
-      "name": "Radio Highway",
-      "province": "World",
-      "frequency": 103.5,
-      "address": null,
-      "stream_url": "http://streaming.hamropatro.com:8014/;",
-      "logo": "logos/radio-highway.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-nation",
-      "name": "Radio Nation",
-      "province": "World",
-      "frequency": 103.9,
-      "address": null,
-      "stream_url": "http://live.itech.host:1440/stream",
-      "logo": "logos/radio-nation.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-olive-nepal",
-      "name": "Radio Olive Nepal",
-      "province": "World",
-      "frequency": null,
-      "address": "Al Safiliya Street, Doha, Qatar",
-      "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_OLIVE_HITS_S02AAC.aac",
-      "logo": "logos/radio-olive-nepal.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "sunrise-radio",
-      "name": "Sunrise Radio",
-      "province": "World",
-      "frequency": null,
-      "address": "Sunrise Radio, 694-712 London Road, Hounslow, London, United Kingdom",
-      "stream_url": "https://direct.sharp-stream.com/sunriseradio.mp3",
-      "logo": "logos/sunrise-radio.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     }

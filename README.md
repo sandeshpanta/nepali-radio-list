@@ -1,6 +1,6 @@
-# Nepali Radio List
+﻿# Nepali Radio List
 
-A checked list of **245 live Nepali radio stations** (stream URL, province, frequency, logo), a small
+A checked list of **235 live Nepali radio stations** (stream URL, province, frequency, logo), a small
 **PHP website** to browse and play them, and a free **JSON API**.
 
 Every stream in `data/radios.json` was tested on 2026-10-31: it answered and really delivered audio.
@@ -70,7 +70,7 @@ It is an ordinary PHP site, so any PHP host works (GitHub Pages cannot run PHP).
 2. Make `public/` the document root. On Apache the included `.htaccess` does the routing; on nginx send
    every request that is not a real file to `public/index.php`.
 3. Serve it over `https` if you can. Browsers block plain `http://` streams on an `https://` page, so
-   for those stations the website shows a ↗ button that opens the stream in a new tab.
+   for those stations the website shows a â†— button that opens the stream in a new tab.
 
 ## Keeping the list fresh
 
