@@ -1,0 +1,137 @@
+{
+  "updated": "2026-10-31",
+  "stations": [
+    {
+      "id": "panchthar-fm",
+      "name": "Panchthar FM",
+      "province": "Koshi",
+      "frequency": 93.3,
+      "address": "Kumayak - 1, Yashok,Panchthar, Nepal",
+      "stream_url": "http://live.itech.host:2100/stream",
+      "logo": "logos/panchthar-fm.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-khotang",
+      "name": "Radio Khotang",
+      "province": "Koshi",
+      "frequency": 103.3,
+      "address": "Khotang halesi nagarpalika,durchhim",
+      "stream_url": "http://streaming.hamropatro.com:8813",
+      "logo": "logos/radio-khotang.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-udaypur",
+      "name": "Radio Udaypur",
+      "province": "Koshi",
+      "frequency": 102.4,
+      "address": "Triyuga, Udayapur, Nepal",
+      "stream_url": "http://streaming.hamropatro.com:8021",
+      "logo": "logos/radio-udaypur.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-baadal",
+      "name": "Radio Baadal",
+      "province": "Madhesh",
+      "frequency": 89.0,
+      "address": "Simraungadh, Bara, Nepal",
+      "stream_url": "http://streaming.hamropatro.com:8188/;",
+      "logo": "logos/radio-baadal.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "newa-fm",
+      "name": "Newa FM",
+      "province": "Bagmati",
+      "frequency": 106.6,
+      "address": "Kirtipur-2, Kathmandu",
+      "stream_url": "http://streaming.hamropatro.com:8835/;",
+      "logo": "logos/newa-fm.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-chimteshwor",
+      "name": "Radio Chimteshwor",
+      "province": "Bagmati",
+      "frequency": 90.9,
+      "address": "Belkot, Nuwakot",
+      "stream_url": "http://live.itech.host:8974/stream?mp3",
+      "logo": "logos/radio-chimteshwor.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-jiri",
+      "name": "Radio Jiri",
+      "province": "Bagmati",
+      "frequency": 94.0,
+      "address": "Jiri-6, Dolakha",
+      "stream_url": "http://streaming.hamropatro.com:8727",
+      "logo": "logos/radio-jiri.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-aandhikhola",
+      "name": "Radio Aandhikhola",
+      "province": "Gandaki",
+      "frequency": null,
+      "address": null,
+      "stream_url": "https://live.itech.host:8863/stream",
+      "logo": "logos/radio-aandhikhola.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-saligram",
+      "name": "Radio Saligram",
+      "province": "Gandaki",
+      "frequency": 100.6,
+      "address": "Kushma, Municipality 12 Parbat",
+      "stream_url": "http://streaming.hamropatro.com:8254",
+      "logo": "logos/radio-saligram.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-karnali-fm-jumla",
+      "name": "Radio Karnali FM Jumla",
+      "province": "Karnali",
+      "frequency": 105.2,
+      "address": "Jumla, Karnali, Nepal",
+      "stream_url": "http://216.55.141.189:8773",
+      "logo": "logos/radio-karnali-fm-jumla.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-amargadhi",
+      "name": "Radio Amargadhi",
+      "province": "Sudurpashchim",
+      "frequency": 97.4,
+      "address": "Amargadhi-5, Dadeldhura",
+      "stream_url": "http://live.itechnepal.com:8922/live",
+      "logo": "logos/radio-amargadhi.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "radio-sahino",
+      "name": "Radio Sahino",
+      "province": "World",
+      "frequency": null,
+      "address": null,
+      "stream_url": "http://live.itech.host:7093/stream",
+      "logo": "logos/radio-sahino.jpg",
+      "online": false,
+      "checked_at": "2026-10-31"
+    }
+  ]
+}

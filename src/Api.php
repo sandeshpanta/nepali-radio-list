@@ -40,6 +40,21 @@ final class Api
         return [404, ['error' => 'Unknown endpoint.', 'endpoints' => ['/api/radios', '/api/radios/{id}', '/api/provinces']]];
     }
 
+    /** All online stations as CSV (UTF-8 with BOM so Excel shows Nepali text correctly). */
+    public function csv(): string
+    {
+        $columns = ['id', 'name', 'province', 'frequency', 'address', 'stream_url', 'logo_url', 'checked_at'];
+        $out = fopen('php://temp', 'r+');
+        fputcsv($out, $columns, ',', '"', '');
+        foreach ($this->radios->all(['online' => true]) as $station) {
+            $row = $this->present($station);
+            fputcsv($out, array_map(static fn (string $c) => $row[$c] ?? '', $columns), ',', '"', '');
+        }
+        rewind($out);
+
+        return "\xEF\xBB\xBF" . stream_get_contents($out);
+    }
+
     private function list(array $query): array
     {
         // Only stations whose stream last checked out are listed, unless ?online=0 (offline only) or ?online=all.

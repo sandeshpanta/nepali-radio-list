@@ -42,5 +42,8 @@ $check('unknown id is 404', $status === 404);
 [$status, $body] = $api->handle('/api/provinces', []);
 $check('provinces lists all 8', $status === 200 && count($body['data']) === 8);
 
+$csv = $api->csv();
+$check('csv has a header and one line per station', substr_count($csv, "\n") === count($stations) + 1 && str_contains($csv, 'stream_url'));
+
 echo $failures === 0 ? "All good.\n" : "{$failures} check(s) failed.\n";
 exit($failures === 0 ? 0 : 1);

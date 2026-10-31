@@ -49,6 +49,14 @@ if (str_starts_with($path, '/api')) {
         return;
     }
 
+    if ($path === '/api/radios.csv') {
+        header('Content-Type: text/csv; charset=utf-8');
+        header('Content-Disposition: attachment; filename="nepali-radios.csv"');
+        echo (new Api($radios, $baseUrl))->csv();
+
+        return;
+    }
+
     [$status, $body] = (new Api($radios, $baseUrl))->handle($path, $_GET);
     http_response_code($status);
     echo json_encode($body, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);

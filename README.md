@@ -1,21 +1,26 @@
 # Nepali Radio List
 
-A checked list of **257 live Nepali radio stations** (stream URL, province, frequency, logo), a small
+A checked list of **245 live Nepali radio stations** (stream URL, province, frequency, logo), a small
 **PHP website** to browse and play them, and a free **JSON API**.
 
 Every stream in `data/radios.json` was tested on 2026-10-31: it answered and really delivered audio.
-Dead links from the original list (about 300) were removed.
+About 300 dead links from the original list were removed; 12 that went offline on the day of the final
+check are kept in `data/offline.json`.
 
-## Run it
+## Quick start
 
-Needs PHP 8.1 or newer. No Composer, no database.
+You need PHP 8.1 or newer (`php --version` shows it). No Composer, no database.
 
 ```bash
+git clone https://github.com/sandeshpanta/nepali-radio-list.git
+cd nepali-radio-list
 php -S localhost:8000 -t public public/index.php
 ```
 
-Open <http://localhost:8000>. On Apache or shared hosting, point the document root at `public/`
-(the included `.htaccess` does the routing).
+Open <http://localhost:8000>. On Windows you can double-click `serve.bat` instead.
+
+The page has two tabs: **Listen** (search, province filter, play button) and **API / Data** (links,
+downloads and code examples).
 
 ## API
 
@@ -23,9 +28,10 @@ All endpoints are `GET`, return JSON and allow cross-origin requests.
 
 | Endpoint | What it returns |
 |---|---|
-| `/api/radios` | stations; filters: `province`, `q` (name, place, frequency), `online` (`all` or `0` to include offline ones), `limit` (max 500), `offset` |
+| `/api/radios` | stations; filters: `province`, `q` (name, place, frequency), `limit` (max 500), `offset`, `online=all` (include offline ones) |
 | `/api/radios/{id}` | one station |
 | `/api/provinces` | the 8 provinces with their station counts |
+| `/api/radios.csv` | the whole list as a CSV file |
 
 ```bash
 curl "http://localhost:8000/api/radios?province=Gandaki&q=fm&limit=3"
@@ -53,8 +59,18 @@ curl "http://localhost:8000/api/radios?province=Gandaki&q=fm&limit=3"
 Provinces: Koshi, Madhesh, Bagmati, Gandaki, Lumbini, Karnali, Sudurpashchim, and **World** for stations
 outside Nepal or without a known location.
 
-No server? `data/radios.json` is plain JSON, so you can read it straight from GitHub's raw URL.
-The `logo` field in it is a path relative to `public/` (for example `logos/radio-kantipur.jpg`).
+`data/radios.json` is also plain JSON you can read straight from GitHub's raw URL. The `logo` field in it
+is a path relative to `public/` (for example `logos/radio-kantipur.jpg`).
+
+## Put it online
+
+It is an ordinary PHP site, so any PHP host works (GitHub Pages cannot run PHP).
+
+1. Upload the whole project.
+2. Make `public/` the document root. On Apache the included `.htaccess` does the routing; on nginx send
+   every request that is not a real file to `public/index.php`.
+3. Serve it over `https` if you can. Browsers block plain `http://` streams on an `https://` page, so
+   for those stations the website shows a ↗ button that opens the stream in a new tab.
 
 ## Keeping the list fresh
 
@@ -71,11 +87,13 @@ Run the PHP checks with `php tests/smoke.php`.
 
 ```
 data/radios.json      the stations (edit this to add or fix one)
+data/offline.json     stations that were offline at the last check
 public/               web root: index.php, logos/
 src/                  RadioRepository (reads the data) and Api
-views/home.php        the website
+views/home.php        the website (Listen + API tabs)
 tools/check_streams.py
 tests/smoke.php
+serve.bat             Windows shortcut for the quick start
 ```
 
 ## Adding a station
@@ -86,7 +104,7 @@ Then run `python tools/check_streams.py` and `php tests/smoke.php`.
 
 ## Notes
 
-- Streams that start with `http://` cannot be played inside an `https://` page by the browser. The website
-  shows an "open in new tab" link for those when it is served over HTTPS.
+- Shoutcast servers send an HTML status page to browsers when you open the bare `http://host:port` URL.
+  Where that happened the stream URL ends with `/;`, which makes the server send audio to browsers too.
 - Station names and logos belong to their owners; they are included only to identify the stations.
 - The code is MIT-licensed (see `LICENSE`).

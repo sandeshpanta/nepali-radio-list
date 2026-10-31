@@ -7,7 +7,7 @@
       "province": "Koshi",
       "frequency": 99.0,
       "address": "Khudunabari, Jhapa",
-      "stream_url": "http://streaming.hamropatro.com:8619",
+      "stream_url": "http://streaming.hamropatro.com:8619/;",
       "logo": "logos/a-one-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -62,7 +62,7 @@
       "province": "Koshi",
       "frequency": null,
       "address": "त्रियुगा नगरपालिका - ११, गाईघाट, उदयपुर",
-      "stream_url": "http://streaming.softnep.net:8341/",
+      "stream_url": "http://streaming.softnep.net:8341/;",
       "logo": "logos/khulaasa-news.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -108,17 +108,6 @@
       "address": "Khandbari-1, Sankhuwasabha",
       "stream_url": "https://live.itech.host:7051/stream",
       "logo": "logos/pakhribas-fm.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "panchthar-fm",
-      "name": "Panchthar FM",
-      "province": "Koshi",
-      "frequency": 93.3,
-      "address": "Kumayak - 1, Yashok,Panchthar, Nepal",
-      "stream_url": "http://live.itech.host:2100/stream",
-      "logo": "logos/panchthar-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -183,7 +172,7 @@
       "province": "Koshi",
       "frequency": 94.4,
       "address": "Beltar, udayapur",
-      "stream_url": "http://chaudandigadhi.online.org.np:8098",
+      "stream_url": "http://chaudandigadhi.online.org.np:8098/;",
       "logo": "logos/radio-chaudandigadhi-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -205,7 +194,7 @@
       "province": "Koshi",
       "frequency": 103.3,
       "address": "Damak",
-      "stream_url": "http://streaming.hamropatro.com:5507",
+      "stream_url": "http://streaming.hamropatro.com:5507/;",
       "logo": "logos/radio-himshikhar.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -222,23 +211,12 @@
       "checked_at": "2026-10-31"
     },
     {
-      "id": "radio-khotang",
-      "name": "Radio Khotang",
-      "province": "Koshi",
-      "frequency": 103.3,
-      "address": "Khotang halesi nagarpalika,durchhim",
-      "stream_url": "http://streaming.hamropatro.com:8813",
-      "logo": "logos/radio-khotang.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
       "id": "radio-menchhyayem",
       "name": "Radio Menchhyayem",
       "province": "Koshi",
       "frequency": 103.4,
       "address": "Myanglung Terhathum",
-      "stream_url": "http://streaming.hamropatro.com:8411",
+      "stream_url": "http://streaming.hamropatro.com:8411/;",
       "logo": "logos/radio-menchhyayem.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -271,7 +249,7 @@
       "province": "Koshi",
       "frequency": null,
       "address": "Sankhuwasabha",
-      "stream_url": "http://streaming.softnep.net:8357",
+      "stream_url": "http://streaming.softnep.net:8357/;",
       "logo": "logos/radio-nagarik-chaso.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -293,7 +271,7 @@
       "province": "Koshi",
       "frequency": 89.4,
       "address": "Itahari-5, Sunsari",
-      "stream_url": "http://centova1.toofancom.com:4770",
+      "stream_url": "http://centova1.toofancom.com:4770/;",
       "logo": "logos/radio-pariwartan.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -326,7 +304,7 @@
       "province": "Koshi",
       "frequency": 106.3,
       "address": "Sundarharaicha 10 Municipality, Biratchowk, Morang",
-      "stream_url": "http://streaming.hamropatro.com:8443",
+      "stream_url": "http://streaming.hamropatro.com:8443/;",
       "logo": "logos/radio-suseli.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -350,17 +328,6 @@
       "address": "Phungling-4, Taplejung",
       "stream_url": "http://live.itech.host:9012/stream",
       "logo": "logos/radio-taplejung.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-udaypur",
-      "name": "Radio Udaypur",
-      "province": "Koshi",
-      "frequency": 102.4,
-      "address": "Triyuga, Udayapur, Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8021",
-      "logo": "logos/radio-udaypur.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -403,7 +370,7 @@
       "province": "Koshi",
       "frequency": 92.3,
       "address": "Katari, Udayapur, Katari, Benin",
-      "stream_url": "http://streaming.hamropatro.com:5511",
+      "stream_url": "http://streaming.hamropatro.com:5511/;",
       "logo": "logos/samabeshi-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -436,7 +403,7 @@
       "province": "Koshi",
       "frequency": 106.8,
       "address": "Katari 3 Udayapur",
-      "stream_url": "http://streaming.hamropatro.com:8843",
+      "stream_url": "http://streaming.hamropatro.com:8843/;",
       "logo": "logos/uk-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -524,7 +491,7 @@
       "province": "Madhesh",
       "frequency": 104.0,
       "address": "Kshireshwarnath Mun-5, Mahendranagar, Dhanusha",
-      "stream_url": "http://streaming.hamropatro.com:8038",
+      "stream_url": "http://streaming.hamropatro.com:8038/;",
       "logo": "logos/dudhmati-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -535,7 +502,7 @@
       "province": "Madhesh",
       "frequency": 99.7,
       "address": "Baudhimai-8 Sarmujwa Rautahat Nepal",
-      "stream_url": "http://216.55.141.189:8082",
+      "stream_url": "http://216.55.141.189:8082/;",
       "logo": "logos/gujaramai-fm-99-7.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -568,7 +535,7 @@
       "province": "Madhesh",
       "frequency": 100.7,
       "address": "Maulapur Municipality - 5, Maulapur Rautahat",
-      "stream_url": "http://streaming.hamropatro.com:8220",
+      "stream_url": "http://streaming.hamropatro.com:8220/;",
       "logo": "logos/maulapur-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -581,17 +548,6 @@
       "address": "PO Box: 23,Link Road Birgunj, Parsa, Nepal",
       "stream_url": "http://streaming.hamropatro.com:8272/;",
       "logo": "logos/narayani-fm-103-8-mhz.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-baadal",
-      "name": "Radio Baadal",
-      "province": "Madhesh",
-      "frequency": 89.0,
-      "address": "Simraungadh, Bara, Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8188/;",
-      "logo": "logos/radio-baadal.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -612,7 +568,7 @@
       "province": "Madhesh",
       "frequency": 91.1,
       "address": "Malangawa -09 - Sarlahi Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8557",
+      "stream_url": "http://streaming.hamropatro.com:8557/;",
       "logo": "logos/radio-barsha.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -623,7 +579,7 @@
       "province": "Madhesh",
       "frequency": 107.6,
       "address": "Chhipaharmaigaupalika-5 Parsa Nepal",
-      "stream_url": "http://streaming.hamropatro.com:5527",
+      "stream_url": "http://streaming.hamropatro.com:5527/;",
       "logo": "logos/radio-bhiswa-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -656,7 +612,7 @@
       "province": "Madhesh",
       "frequency": 88.4,
       "address": "Gauridanda Mahottari Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8797",
+      "stream_url": "http://streaming.hamropatro.com:8797/;",
       "logo": "logos/radio-darpan.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -667,7 +623,7 @@
       "province": "Madhesh",
       "frequency": 90.4,
       "address": "Jaleshwar, Mahotthari Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8647",
+      "stream_url": "http://streaming.hamropatro.com:8647/;",
       "logo": "logos/radio-jaleshwarnath.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -678,7 +634,7 @@
       "province": "Madhesh",
       "frequency": null,
       "address": null,
-      "stream_url": "http://216.55.141.189:9380",
+      "stream_url": "http://216.55.141.189:9380/;",
       "logo": "logos/radio-janakpur.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -711,7 +667,7 @@
       "province": "Madhesh",
       "frequency": 100.8,
       "address": "Janakpurdham, Dhanusa",
-      "stream_url": "http://streaming.hamropatro.com:8244",
+      "stream_url": "http://streaming.hamropatro.com:8244/;",
       "logo": "logos/radio-mithila.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -722,7 +678,7 @@
       "province": "Madhesh",
       "frequency": 107.0,
       "address": "Ishwarpur Mun.-6, Bayalbas Bazaar",
-      "stream_url": "http://streaming.hamropatro.com:5501",
+      "stream_url": "http://streaming.hamropatro.com:5501/;",
       "logo": "logos/radio-nigarani.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -733,7 +689,7 @@
       "province": "Madhesh",
       "frequency": 98.8,
       "address": "Jeleshwar Municipality, Ward No. 2, Mahottari",
-      "stream_url": "https://streaming.softnep.net:10874",
+      "stream_url": "https://streaming.softnep.net:10874/;",
       "logo": "logos/radio-rudraksha.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -744,7 +700,7 @@
       "province": "Madhesh",
       "frequency": 88.8,
       "address": "Siraha Municipality-11- Siraha,Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8809",
+      "stream_url": "http://streaming.hamropatro.com:8809/;",
       "logo": "logos/radio-salhesh.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -766,7 +722,7 @@
       "province": "Madhesh",
       "frequency": 89.0,
       "address": "Mithila Municipality -06,Dhalkebar,Dhanusha Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8118",
+      "stream_url": "http://streaming.hamropatro.com:8118/;",
       "logo": "logos/radio-swagatam.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -777,7 +733,7 @@
       "province": "Madhesh",
       "frequency": 102.4,
       "address": "Barahathawa-5, Sarlahi Pradesh-2",
-      "stream_url": "http://streaming.hamropatro.com:8761",
+      "stream_url": "http://streaming.hamropatro.com:8761/;",
       "logo": "logos/radio-tufan.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -821,7 +777,7 @@
       "province": "Bagmati",
       "frequency": 92.4,
       "address": "Saraswati Mart, Thapagaun, New Baneshwor",
-      "stream_url": "http://streaming.softnep.net:8037/",
+      "stream_url": "http://streaming.softnep.net:8037/;",
       "logo": "logos/capital-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -832,7 +788,7 @@
       "province": "Bagmati",
       "frequency": null,
       "address": "सामुदायिक सूचना नेटवर्क (सीआईएन) चाकुपाट ललितपुर, पाटन",
-      "stream_url": "http://streaming.softnep.net:8009",
+      "stream_url": "http://streaming.softnep.net:8009/;",
       "logo": "logos/cin.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -843,7 +799,7 @@
       "province": "Bagmati",
       "frequency": 97.2,
       "address": "Dudhauli-09 Dudhauli Bazar Sindhuli",
-      "stream_url": "http://streaming.hamropatro.com:8461",
+      "stream_url": "http://streaming.hamropatro.com:8461/;",
       "logo": "logos/dudhauli-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -854,7 +810,7 @@
       "province": "Bagmati",
       "frequency": 104.8,
       "address": "Dillibazar, Kathmandu",
-      "stream_url": "http://streaming.hamropatro.com:8074",
+      "stream_url": "http://streaming.hamropatro.com:8074/;",
       "logo": "logos/fm-adhyatma-jyoti.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -887,7 +843,7 @@
       "province": "Bagmati",
       "frequency": 94.0,
       "address": "Bharatpur, Chitwan",
-      "stream_url": "http://216.55.141.189:8114",
+      "stream_url": "http://216.55.141.189:8114/;",
       "logo": "logos/hamro-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -975,7 +931,7 @@
       "province": "Bagmati",
       "frequency": 91.0,
       "address": "Bharatpur -10, Kalika marg",
-      "stream_url": "http://streaming.softnep.net:8740",
+      "stream_url": "http://streaming.softnep.net:8740/;",
       "logo": "logos/kalika-fm-musical.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -997,7 +953,7 @@
       "province": "Bagmati",
       "frequency": 98.3,
       "address": "Kuleshwor Awaschhetra",
-      "stream_url": "http://streaming.hamropatro.com:8385",
+      "stream_url": "http://streaming.hamropatro.com:8385/;",
       "logo": "logos/keeps-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1041,7 +997,7 @@
       "province": "Bagmati",
       "frequency": 94.6,
       "address": "BhrikutiMandap Rastriya SavaGriha, Kathmandu",
-      "stream_url": "http://216.55.141.189:8134",
+      "stream_url": "http://216.55.141.189:8134/;",
       "logo": "logos/metro-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1063,7 +1019,7 @@
       "province": "Bagmati",
       "frequency": null,
       "address": null,
-      "stream_url": "http://streaming.hamropatro.com:8739",
+      "stream_url": "http://streaming.hamropatro.com:8739/;",
       "logo": "logos/music-city-nonstop-music.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1085,19 +1041,8 @@
       "province": "Bagmati",
       "frequency": 88.8,
       "address": "Koteshwor, Kathmandu, Nepal",
-      "stream_url": "http://95.217.153.73:9888/",
+      "stream_url": "http://95.217.153.73:9888/;",
       "logo": "logos/nepaliko-radio.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "newa-fm",
-      "name": "Newa FM",
-      "province": "Bagmati",
-      "frequency": 106.6,
-      "address": "Kirtipur-2, Kathmandu",
-      "stream_url": "http://streaming.hamropatro.com:8835/;",
-      "logo": "logos/newa-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -1151,7 +1096,7 @@
       "province": "Bagmati",
       "frequency": 90.0,
       "address": "Hetauda 4 Khopegalli",
-      "stream_url": "http://streaming.hamropatro.com:8751",
+      "stream_url": "http://streaming.hamropatro.com:8751/;",
       "logo": "logos/radio-anmol.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1195,7 +1140,7 @@
       "province": "Bagmati",
       "frequency": 94.5,
       "address": "Baiteshwor Gaupalika -5 Mainapokhari Dolakha",
-      "stream_url": "http://streaming.hamropatro.com:8531",
+      "stream_url": "http://streaming.hamropatro.com:8531/;",
       "logo": "logos/radio-baiteshwor.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1228,7 +1173,7 @@
       "province": "Bagmati",
       "frequency": 93.0,
       "address": "Kamalamai Municipality-6, Sindhuli",
-      "stream_url": "http://streaming.hamropatro.com:8719",
+      "stream_url": "http://streaming.hamropatro.com:8719/;",
       "logo": "logos/radio-bijayakilla.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1252,17 +1197,6 @@
       "address": "Kathmandu, Nepal",
       "stream_url": "https://radio-stream-relay-np.hamropatro.com/radio/8030/radio.mp3",
       "logo": "logos/radio-candid.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-chimteshwor",
-      "name": "Radio Chimteshwor",
-      "province": "Bagmati",
-      "frequency": 90.9,
-      "address": "Belkot, Nuwakot",
-      "stream_url": "http://live.itech.host:8974/stream?mp3",
-      "logo": "logos/radio-chimteshwor.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -1333,17 +1267,6 @@
       "checked_at": "2026-10-31"
     },
     {
-      "id": "radio-jiri",
-      "name": "Radio Jiri",
-      "province": "Bagmati",
-      "frequency": 94.0,
-      "address": "Jiri-6, Dolakha",
-      "stream_url": "http://streaming.hamropatro.com:8727",
-      "logo": "logos/radio-jiri.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
       "id": "radio-jugal",
       "name": "Radio Jugal",
       "province": "Bagmati",
@@ -1360,7 +1283,7 @@
       "province": "Bagmati",
       "frequency": 96.4,
       "address": "Umakunda-2, Bamti-Bhandar, Deurali, Ramechhap, Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8793",
+      "stream_url": "http://streaming.hamropatro.com:8793/;",
       "logo": "logos/radio-kairan.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1404,7 +1327,7 @@
       "province": "Bagmati",
       "frequency": 107.6,
       "address": "Basantapur Bajar, Madi Chitwan",
-      "stream_url": "http://streaming.hamropatro.com:8457",
+      "stream_url": "http://streaming.hamropatro.com:8457/;",
       "logo": "logos/radio-madi.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1415,7 +1338,7 @@
       "province": "Bagmati",
       "frequency": 101.3,
       "address": "Hetauda-2, Palpasa road, Makawanpur, Nepal",
-      "stream_url": "http://streaming.softnep.net:8057",
+      "stream_url": "http://streaming.softnep.net:8057/;",
       "logo": "logos/radio-makawanpur.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1448,7 +1371,7 @@
       "province": "Bagmati",
       "frequency": 89.4,
       "address": "Anamnagar, Kathmandu Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8232",
+      "stream_url": "http://streaming.hamropatro.com:8232/;",
       "logo": "logos/radio-mirmire.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1459,7 +1382,7 @@
       "province": "Bagmati",
       "frequency": 105.3,
       "address": "Indrawati -5, Sindhupalchowk",
-      "stream_url": "http://centova1.toofancom.com:4163",
+      "stream_url": "http://centova1.toofancom.com:4163/;",
       "logo": "logos/radio-mission.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1492,7 +1415,7 @@
       "province": "Bagmati",
       "frequency": 102.4,
       "address": "Lalitpur, Nepal",
-      "stream_url": "http://216.55.141.189:8004",
+      "stream_url": "http://216.55.141.189:8004/;",
       "logo": "logos/radio-sagarmatha.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1514,7 +1437,7 @@
       "province": "Bagmati",
       "frequency": null,
       "address": "Ratnanagar Municipality 6 Sauraha, Chitwan",
-      "stream_url": "https://streaming.softnep.net:10827/",
+      "stream_url": "https://streaming.softnep.net:10827/;",
       "logo": "logos/radio-sauraha.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1536,7 +1459,7 @@
       "province": "Bagmati",
       "frequency": 105.0,
       "address": "Chautara-8, Sindhupalchok",
-      "stream_url": "http://streaming.softnep.net:8041/",
+      "stream_url": "http://streaming.softnep.net:8041/;",
       "logo": "logos/radio-sindhu.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1569,7 +1492,7 @@
       "province": "Bagmati",
       "frequency": 99.6,
       "address": "Hetauda -4 AjarAmar  Road",
-      "stream_url": "http://streaming.softnep.net:8001/",
+      "stream_url": "http://streaming.softnep.net:8001/;",
       "logo": "logos/radio-thaha-sanchar-fm-hetauda.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1580,7 +1503,7 @@
       "province": "Bagmati",
       "frequency": 99.4,
       "address": "Babarmahal, Kathmandu",
-      "stream_url": "http://streaming.softnep.net:8025",
+      "stream_url": "http://streaming.softnep.net:8025/;",
       "logo": "logos/radio-thaha-sanchar-fm-kathmandu.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1602,7 +1525,7 @@
       "province": "Bagmati",
       "frequency": 102.7,
       "address": "Changunarayan 08, Bhaktapur",
-      "stream_url": "http://streaming.hamropatro.com:5525",
+      "stream_url": "http://streaming.hamropatro.com:5525/;",
       "logo": "logos/shikhar-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1646,7 +1569,7 @@
       "province": "Bagmati",
       "frequency": 90.6,
       "address": "Chabahil, Kathmandu",
-      "stream_url": "http://streaming.hamropatro.com:8663",
+      "stream_url": "http://streaming.hamropatro.com:8663/;",
       "logo": "logos/times-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1668,7 +1591,7 @@
       "province": "Gandaki",
       "frequency": 98.9,
       "address": "Pokhara, Kaski",
-      "stream_url": "http://streaming.hamropatro.com:4156",
+      "stream_url": "http://streaming.hamropatro.com:4156/;",
       "logo": "logos/24-asal-sathi-radio.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1679,7 +1602,7 @@
       "province": "Gandaki",
       "frequency": 94.6,
       "address": "Pokhara, Kaski",
-      "stream_url": "http://streaming.hamropatro.com:8234",
+      "stream_url": "http://streaming.hamropatro.com:8234/;",
       "logo": "logos/3-angels-community-radio.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1756,7 +1679,7 @@
       "province": "Gandaki",
       "frequency": 88.2,
       "address": "Beni Nagarpalika 07- Myagdi, Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8539",
+      "stream_url": "http://streaming.hamropatro.com:8539/;",
       "logo": "logos/myagdikali-fm-88-2-mhz.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1767,7 +1690,7 @@
       "province": "Gandaki",
       "frequency": 102.8,
       "address": "Kusma ,Parbat Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8825",
+      "stream_url": "http://streaming.hamropatro.com:8825/;",
       "logo": "logos/panchase-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1780,17 +1703,6 @@
       "address": "Bandipur-1, Tanahu",
       "stream_url": "http://streaming.hamropatro.com:8587/stream",
       "logo": "logos/power-fm.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-aandhikhola",
-      "name": "Radio Aandhikhola",
-      "province": "Gandaki",
-      "frequency": null,
-      "address": null,
-      "stream_url": "https://live.itech.host:8863/stream",
-      "logo": "logos/radio-aandhikhola.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -1833,7 +1745,7 @@
       "province": "Gandaki",
       "frequency": 90.8,
       "address": "Sundarbajar Municipality -09, Lamjung Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8381",
+      "stream_url": "http://streaming.hamropatro.com:8381/;",
       "logo": "logos/radio-bhotewodar.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1844,7 +1756,7 @@
       "province": "Gandaki",
       "frequency": 95.6,
       "address": "Burtibang, Baglung",
-      "stream_url": "http://streaming.hamropatro.com:8016/",
+      "stream_url": "http://streaming.hamropatro.com:8016/;",
       "logo": "logos/radio-burtibang.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1877,7 +1789,7 @@
       "province": "Gandaki",
       "frequency": 102.6,
       "address": "Devghat-5, Tanahun",
-      "stream_url": "http://streaming.hamropatro.com:8855",
+      "stream_url": "http://streaming.hamropatro.com:8855/;",
       "logo": "logos/radio-devghat.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1932,7 +1844,7 @@
       "province": "Gandaki",
       "frequency": 107.9,
       "address": "Pokhara 25/14 Kaski Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8012",
+      "stream_url": "http://streaming.hamropatro.com:8012/;",
       "logo": "logos/radio-paschim-pokhara.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -1945,17 +1857,6 @@
       "address": "Masbar-7, Pokhara",
       "stream_url": "https://live.itech.host:9149/stream",
       "logo": "logos/radio-safalta.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-saligram",
-      "name": "Radio Saligram",
-      "province": "Gandaki",
-      "frequency": 100.6,
-      "address": "Kushma, Municipality 12 Parbat",
-      "stream_url": "http://streaming.hamropatro.com:8254",
-      "logo": "logos/radio-saligram.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -1998,7 +1899,7 @@
       "province": "Lumbini",
       "frequency": 90.4,
       "address": "Tamghas, Gulmi",
-      "stream_url": "http://streaming.hamropatro.com:8421",
+      "stream_url": "http://streaming.hamropatro.com:8421/;",
       "logo": "logos/community-radio-sky-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2020,7 +1921,7 @@
       "province": "Lumbini",
       "frequency": 91.3,
       "address": "Kapilvastu",
-      "stream_url": "http://216.55.141.189:8737",
+      "stream_url": "http://216.55.141.189:8737/;",
       "logo": "logos/heart-beat-f-m.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2031,7 +1932,7 @@
       "province": "Lumbini",
       "frequency": 88.4,
       "address": "Kaligandaki 2 Gulmi",
-      "stream_url": "http://streaming.hamropatro.com:8353",
+      "stream_url": "http://streaming.hamropatro.com:8353/;",
       "logo": "logos/kaligandaki-fm-gulmi.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2053,7 +1954,7 @@
       "province": "Lumbini",
       "frequency": null,
       "address": "Shikha Media Pvt.Ltd. Sunwal-1, Nawalparasi, Lumbini",
-      "stream_url": "http://onlineradio.websoftitnepal.com:8006/",
+      "stream_url": "http://onlineradio.websoftitnepal.com:8006/;",
       "logo": "logos/online-radio-darpan.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2097,7 +1998,7 @@
       "province": "Lumbini",
       "frequency": 94.8,
       "address": "Chaurjahari Municipality,04- Rukum West",
-      "stream_url": "http://streaming.hamropatro.com:8483",
+      "stream_url": "http://streaming.hamropatro.com:8483/;",
       "logo": "logos/radio-chaurjahari.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2108,7 +2009,7 @@
       "province": "Lumbini",
       "frequency": 101.0,
       "address": "Sandhikharka-1, Arghakhachi",
-      "stream_url": "http://streaming.hamropatro.com:8569",
+      "stream_url": "http://streaming.hamropatro.com:8569/;",
       "logo": "logos/radio-deurali.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2119,7 +2020,7 @@
       "province": "Lumbini",
       "frequency": 102.2,
       "address": "Dhurkot-4, Barbot Gulmi",
-      "stream_url": "http://streaming.hamropatro.com:8459",
+      "stream_url": "http://streaming.hamropatro.com:8459/;",
       "logo": "logos/radio-dhurkot.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2163,7 +2064,7 @@
       "province": "Lumbini",
       "frequency": null,
       "address": "Runtigadhi 06 - Holeri Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8170",
+      "stream_url": "http://streaming.hamropatro.com:8170/;",
       "logo": "logos/radio-janmabhumi.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2185,7 +2086,7 @@
       "province": "Lumbini",
       "frequency": 102.6,
       "address": "Kawasoti, Nawalparasi",
-      "stream_url": "http://streaming.hamropatro.com:8435",
+      "stream_url": "http://streaming.hamropatro.com:8435/;",
       "logo": "logos/radio-kawasoti.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2251,7 +2152,7 @@
       "province": "Lumbini",
       "frequency": 106.1,
       "address": "Banganga Kapilvastu Nepal",
-      "stream_url": "http://streaming.hamropatro.com:8379",
+      "stream_url": "http://streaming.hamropatro.com:8379/;",
       "logo": "logos/radio-mayadevi.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2262,7 +2163,7 @@
       "province": "Lumbini",
       "frequency": 90.6,
       "address": "Kohalpur Banke",
-      "stream_url": "http://streaming.hamropatro.com:8769",
+      "stream_url": "http://streaming.hamropatro.com:8769/;",
       "logo": "logos/radio-mission-lumbini.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2295,7 +2196,7 @@
       "province": "Lumbini",
       "frequency": null,
       "address": "Tulsipur SMP-5 Dang",
-      "stream_url": "http://streaming.softnep.net:8331/",
+      "stream_url": "http://streaming.softnep.net:8331/;",
       "logo": "logos/radio-nayan.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2328,7 +2229,7 @@
       "province": "Lumbini",
       "frequency": 93.4,
       "address": "Tulsipur - 5 Salyan Road, Dang",
-      "stream_url": "http://streaming.hamropatro.com:8276",
+      "stream_url": "http://streaming.hamropatro.com:8276/;",
       "logo": "logos/radio-prakriti.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2372,7 +2273,7 @@
       "province": "Lumbini",
       "frequency": null,
       "address": "Runtigadhi 7 Rolpa",
-      "stream_url": "http://streaming.hamropatro.com:8837",
+      "stream_url": "http://streaming.hamropatro.com:8837/;",
       "logo": "logos/radio-sajha-online.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2394,7 +2295,7 @@
       "province": "Lumbini",
       "frequency": 92.4,
       "address": "Amarpath, Butwal",
-      "stream_url": "http://streaming.softnep.net:8047",
+      "stream_url": "http://streaming.softnep.net:8047/;",
       "logo": "logos/radio-sangeet.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2416,7 +2317,7 @@
       "province": "Lumbini",
       "frequency": 105.5,
       "address": "Ramgram-6 ,Parasi, Nawalparasi",
-      "stream_url": "http://streaming.hamropatro.com:8250/",
+      "stream_url": "http://streaming.hamropatro.com:8250/;",
       "logo": "logos/radio-satellite.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2460,7 +2361,7 @@
       "province": "Lumbini",
       "frequency": 102.0,
       "address": "Siddharthanagar - 8, Rupandehi",
-      "stream_url": "http://streaming.softnep.net:8201",
+      "stream_url": "http://streaming.softnep.net:8201/;",
       "logo": "logos/rupandehi-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2493,7 +2394,7 @@
       "province": "Lumbini",
       "frequency": 98.2,
       "address": "Rupandehi, Nepal",
-      "stream_url": "http://streaming.softnep.net:8293",
+      "stream_url": "http://streaming.softnep.net:8293/;",
       "logo": "logos/tinau-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2526,7 +2427,7 @@
       "province": "Karnali",
       "frequency": 98.6,
       "address": "Birendranagar-7, Surkhet",
-      "stream_url": "http://streaming.hamropatro.com:8313",
+      "stream_url": "http://streaming.hamropatro.com:8313/;",
       "logo": "logos/radio-bheri-fm-98-6-102-7-mhz.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2539,17 +2440,6 @@
       "address": "Dailekh Bazar Dailekh",
       "stream_url": "http://streaming.hamropatro.com:8801/stream",
       "logo": "logos/radio-jwala-fm.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-karnali-fm-jumla",
-      "name": "Radio Karnali FM Jumla",
-      "province": "Karnali",
-      "frequency": 105.2,
-      "address": "Jumla, Karnali, Nepal",
-      "stream_url": "http://216.55.141.189:8773",
-      "logo": "logos/radio-karnali-fm-jumla.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -2592,19 +2482,8 @@
       "province": "Sudurpashchim",
       "frequency": null,
       "address": "Beldandi - 01, Kanchanpur",
-      "stream_url": "http://streaming.softnep.net:8241/",
+      "stream_url": "http://streaming.softnep.net:8241/;",
       "logo": "logos/nepalbodh.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-amargadhi",
-      "name": "Radio Amargadhi",
-      "province": "Sudurpashchim",
-      "frequency": 97.4,
-      "address": "Amargadhi-5, Dadeldhura",
-      "stream_url": "http://live.itechnepal.com:8922/live",
-      "logo": "logos/radio-amargadhi.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
@@ -2658,7 +2537,7 @@
       "province": "Sudurpashchim",
       "frequency": 94.0,
       "address": "Dashrathchand Municipality-1, Milan Chowk Baitadi",
-      "stream_url": "http://streaming.softnep.net:8179",
+      "stream_url": "http://streaming.softnep.net:8179/;",
       "logo": "logos/radio-ninglashaini-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2669,7 +2548,7 @@
       "province": "Sudurpashchim",
       "frequency": 89.8,
       "address": "Kanchanpur",
-      "stream_url": "http://centova1.toofancom.com:4753",
+      "stream_url": "http://centova1.toofancom.com:4753/;",
       "logo": "logos/radio-rastriya.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2680,7 +2559,7 @@
       "province": "Sudurpashchim",
       "frequency": 100.6,
       "address": "Chainpur, Bajhang, Nepal",
-      "stream_url": "http://streaming.softnep.net:8165",
+      "stream_url": "http://streaming.softnep.net:8165/;",
       "logo": "logos/saipal-fm.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2746,7 +2625,7 @@
       "province": "World",
       "frequency": null,
       "address": "Melbourne, VIC, Australia",
-      "stream_url": "http://onlineradio.websoftitnepal.com:8048/",
+      "stream_url": "http://onlineradio.websoftitnepal.com:8048/;",
       "logo": "logos/nepali-sanchar-radio.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2768,7 +2647,7 @@
       "province": "World",
       "frequency": 106.2,
       "address": null,
-      "stream_url": "http://streaming.hamropatro.com:8799",
+      "stream_url": "http://streaming.hamropatro.com:8799/;",
       "logo": "logos/radio-energy-106-2-mhz.jpg",
       "online": true,
       "checked_at": "2026-10-31"
@@ -2803,17 +2682,6 @@
       "address": "Al Safiliya Street, Doha, Qatar",
       "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_OLIVE_HITS_S02AAC.aac",
       "logo": "logos/radio-olive-nepal.jpg",
-      "online": true,
-      "checked_at": "2026-10-31"
-    },
-    {
-      "id": "radio-sahino",
-      "name": "Radio Sahino",
-      "province": "World",
-      "frequency": null,
-      "address": null,
-      "stream_url": "http://live.itech.host:7093/stream",
-      "logo": "logos/radio-sahino.jpg",
       "online": true,
       "checked_at": "2026-10-31"
     },
