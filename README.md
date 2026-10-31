@@ -7,7 +7,14 @@ Every stream in `data/radios.json` was tested on 2026-10-31: it answered and rea
 About 300 dead links from the original list were removed; 12 that went offline on the day of the final
 check are kept in `data/offline.json`.
 
-## Quick start
+## Listen online (no install)
+
+Once GitHub Pages is on (Settings -> Pages -> Deploy from branch -> `main` / root), the static `index.html` is a public page:
+**https://sandeshpanta.github.io/nepali-radio-list/**. It lists every station with a play button and has an *API / Data* tab
+for the JSON/CSV links. Plain `http://` streams cannot play inside an `https://` page, so those stations get an
+`↗` button that opens the stream in a new tab. To open it locally use `python -m http.server` (not a double-click on the file).
+
+## Quick start (PHP)
 
 You need PHP 8.1 or newer (`php --version` shows it). No Composer, no database.
 
