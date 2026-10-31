@@ -89,7 +89,6 @@ $exCurl = "curl \"{$api}?province=Karnali\"";
                 <button class="pill" data-p="<?= $e($p['name']) ?>" aria-pressed="false"><?= $e($p['name']) ?><small><?= $p['count'] ?></small></button>
             <?php endforeach; ?>
         </div>
-        <div class="note" id="httpsNote" hidden>This page is on https, so browsers block plain <code>http://</code> streams. Those stations show a ↗ button that opens the stream in a new tab instead.</div>
 
         <ul class="grid" id="list">
             <?php foreach ($stations as $s): ?>
@@ -104,7 +103,7 @@ $exCurl = "curl \"{$api}?province=Karnali\"";
                         <h2 title="<?= $e($s['name']) ?>"><?= $e($s['name']) ?></h2>
                         <p><?= $e($s['province']) ?><?= $s['frequency'] ? ' · ' . $e((string) $s['frequency']) . ' MHz' : '' ?></p>
                     </div>
-                    <button class="play" data-url="<?= $e($s['stream_url']) ?>" data-name="<?= $e($s['name']) ?>" aria-label="Play <?= $e($s['name']) ?>">▶</button>
+                    <button class="play" data-url="<?= $e($s['stream_url']) ?>" data-id="<?= $e($s['id']) ?>" data-name="<?= $e($s['name']) ?>" aria-label="Play <?= $e($s['name']) ?>">▶</button>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -195,15 +194,10 @@ $exCurl = "curl \"{$api}?province=Karnali\"";
         filter();
     });
 
-    // A page served over https cannot play plain http streams: turn those buttons into "open in a new tab" links.
+    // A page served over https cannot play plain http streams directly: send those through this server's relay.
     if (location.protocol === 'https:') {
         [].forEach.call(document.querySelectorAll('.play'), function (b) {
-            if (b.dataset.url.indexOf('http://') !== 0) return;
-            var a = document.createElement('a');
-            a.className = 'play'; a.href = b.dataset.url; a.target = '_blank'; a.rel = 'noopener';
-            a.textContent = '↗'; a.title = 'Open the stream in a new tab';
-            b.replaceWith(a);
-            $('httpsNote').hidden = false;
+            if (b.dataset.url.indexOf('http://') === 0) b.dataset.url = '/relay/' + b.dataset.id;
         });
     }
 

@@ -141,6 +141,10 @@
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };
+  // Address of a server running this project's PHP app (its /relay/{id} makes http:// streams playable on this
+  // https page). Leave empty and those stations get a "↗ open in a new tab" button instead. Example:
+  // var RELAY_BASE = 'https://radio.example.com';
+  var RELAY_BASE = '';
   var DATA_URL = new URL('data/radios.json', location.href).href;
   var LOGO_BASE = new URL('public/', location.href).href;
   var ORDER = ['Koshi', 'Madhesh', 'Bagmati', 'Gandaki', 'Lumbini', 'Karnali', 'Sudurpashchim', 'World'];
@@ -196,7 +200,7 @@
       var p = document.createElement('p'); p.textContent = s.province + (s.frequency ? ' · ' + s.frequency + ' MHz' : '');
       meta.append(h, p);
       var btn;
-      if (secure && s.stream_url.indexOf('http://') === 0) {
+      if (secure && s.stream_url.indexOf('http://') === 0 && !RELAY_BASE) {
         btn = document.createElement('a'); btn.href = s.stream_url; btn.target = '_blank'; btn.rel = 'noopener';
         btn.textContent = '↗'; btn.title = 'Open the stream in a new tab'; $('httpsNote').hidden = false;
       } else {
@@ -238,7 +242,7 @@
     $('err').textContent = ''; $('now').textContent = s.name; $('player').classList.add('on');
     if (playingCard) playingCard.classList.remove('playing');
     playingCard = li; li.classList.add('playing');
-    audio.src = s.stream_url;
+    audio.src = (secure && s.stream_url.indexOf('http://') === 0 && RELAY_BASE) ? RELAY_BASE.replace(/\/$/, '') + '/relay/' + s.id : s.stream_url;
     audio.play().catch(function () { $('err').textContent = 'Could not play this stream.'; });
   }
   audio.addEventListener('error', function () { $('err').textContent = 'Could not play this stream.'; });

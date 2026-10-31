@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../src/RadioRepository.php';
 require __DIR__ . '/../src/Api.php';
+require __DIR__ . '/../src/Relay.php';
 
 use NepaliRadio\Api;
 use NepaliRadio\RadioRepository;
@@ -41,6 +42,11 @@ $check('unknown id is 404', $status === 404);
 
 [$status, $body] = $api->handle('/api/provinces', []);
 $check('provinces lists all 8', $status === 200 && count($body['data']) === 8);
+
+$check('relay refuses private addresses', ! \NepaliRadio\Relay::inspect('http://192.168.1.5:8000/x')['ok'] && ! \NepaliRadio\Relay::inspect('http://127.0.0.1/x')['ok']);
+$check('relay refuses mail/database ports', ! \NepaliRadio\Relay::inspect('http://8.8.8.8:25/')['ok'] && ! \NepaliRadio\Relay::inspect('http://8.8.8.8:3306/')['ok']);
+$check('relay refuses non-http schemes', ! \NepaliRadio\Relay::inspect('file:///etc/passwd')['ok'] && ! \NepaliRadio\Relay::inspect('ftp://8.8.8.8/')['ok']);
+$check('relay accepts a public address', \NepaliRadio\Relay::inspect('http://8.8.8.8:8000/stream')['ok']);
 
 $csv = $api->csv();
 $check('csv has a header and one line per station', substr_count($csv, "\n") === count($stations) + 1 && str_contains($csv, 'stream_url'));

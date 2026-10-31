@@ -11,8 +11,9 @@ check are kept in `data/offline.json`.
 
 Once GitHub Pages is on (Settings -> Pages -> Deploy from branch -> `main` / root), the static `index.html` is a public page:
 **https://sandeshpanta.github.io/nepali-radio-list/**. It lists every station with a play button and has an *API / Data* tab
-for the JSON/CSV links. Plain `http://` streams cannot play inside an `https://` page, so those stations get an
-`↗` button that opens the stream in a new tab. To open it locally use `python -m http.server` (not a double-click on the file).
+for the JSON/CSV links. Plain `http://` streams cannot play inside an `https://` page; see
+[Playing http streams on an https page](#playing-http-streams-on-an-https-page-the-relay) for how to make them play too.
+To open it locally use `python -m http.server` (not a double-click on the file).
 
 ## Quick start (PHP)
 
@@ -76,8 +77,33 @@ It is an ordinary PHP site, so any PHP host works (GitHub Pages cannot run PHP, 
 1. Upload the whole project.
 2. Make `public/` the document root. On Apache the included `.htaccess` does the routing; on nginx send
    every request that is not a real file to `public/index.php`.
-3. Serve it over `https` if you can. Browsers block plain `http://` streams on an `https://` page, so
-   for those stations the website shows a â†— button that opens the stream in a new tab.
+3. Serve it over `https` if you can. The website then plays plain `http://` stations through its own relay
+   (see below), so every station works.
+
+## Playing http streams on an https page (the relay)
+
+Browsers refuse to play `http://` audio inside an `https://` page, and about 60% of the stations only stream over
+plain http. The PHP app therefore has a relay: `https://your-server/relay/{station-id}` fetches the real stream and
+passes the audio on. Stations that already use https are redirected to their own address and never touch the relay.
+
+* **On your own PHP site** nothing to do. When the page is served over https it uses `/relay/{id}` for http stations.
+* **For the GitHub Pages page** deploy the PHP app on any https server, then open `index.html` and set the address at
+  the top of its script: `var RELAY_BASE = 'https://radio.example.com';` and push. The ▶ button then works for
+  every station instead of showing ↗.
+
+How it protects the server:
+
+* only stations listed in `data/radios.json` can be relayed (an address in the request is never fetched);
+* addresses on private networks and mail/database/SSH ports are refused, redirects are re-checked at every hop;
+* at most `RADIO_RELAY_MAX` listeners at once (default 20), each cut after `RADIO_RELAY_MAX_MINUTES` (default 720),
+  and a station that stops sending data is dropped after 15 seconds;
+* set `RADIO_RELAY=off` to switch the relay off.
+
+Things to know: every listener keeps one PHP worker busy, so size `pm.max_children` (php-fpm) or Apache workers for
+the number of listeners you expect, and expect the server's bandwidth to carry the audio (about 16 KB/s per listener).
+On nginx add `fastcgi_buffering off;` for the PHP location so audio is not held back. PHP's built-in `php -S` server
+(Windows) serves one request at a time, so only one listener at once is possible there; use Apache/nginx for real use.
+PHP needs the `curl` extension.
 
 ## Keeping the list fresh
 
@@ -97,7 +123,7 @@ index.html            static page for GitHub Pages (listen + data links)
 data/radios.json      the stations (edit this to add or fix one)
 data/offline.json     stations that were offline at the last check
 public/               web root: index.php, logos/
-src/                  RadioRepository (reads the data) and Api
+src/                  RadioRepository (reads the data), Api and Relay (https relay)
 views/home.php        the website (Listen + API tabs)
 tools/check_streams.py
 tests/smoke.php
