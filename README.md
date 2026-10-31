@@ -1,4 +1,4 @@
-﻿# Nepali Radio List
+# Nepali Radio List
 
 A checked list of **235 live Nepali radio stations** (stream URL, province, frequency, logo), a small
 **PHP website** to browse and play them, and a free **JSON API**.
@@ -64,7 +64,7 @@ is a path relative to `public/` (for example `logos/radio-kantipur.jpg`).
 
 ## Put it online
 
-It is an ordinary PHP site, so any PHP host works (GitHub Pages cannot run PHP).
+It is an ordinary PHP site, so any PHP host works (GitHub Pages cannot run PHP, which is why `index.html` exists).
 
 1. Upload the whole project.
 2. Make `public/` the document root. On Apache the included `.htaccess` does the routing; on nginx send
@@ -86,6 +86,7 @@ Run the PHP checks with `php tests/smoke.php`.
 ## Layout
 
 ```
+index.html            static page for GitHub Pages (listen + data links)
 data/radios.json      the stations (edit this to add or fix one)
 data/offline.json     stations that were offline at the last check
 public/               web root: index.php, logos/

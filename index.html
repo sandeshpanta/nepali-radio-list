@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nepali Radio List</title>
+<meta name="description" content="Working live stream links for Nepali radio stations. Listen here or use the free JSON data.">
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --text:#171a22; --muted:#667085; --line:#e4e7ec; --accent:#4f46e5; --accent-text:#fff; --code:#eef0f6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0e1015; --card:#171a22; --text:#eef0f6; --muted:#98a2b3; --line:#272b36; --accent:#818cf8; --accent-text:#0e1015; --code:#1f232d; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; padding-bottom:84px; }
+  a { color:var(--accent); }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 16px; }
+  header { padding:28px 0 4px; }
+  h1 { margin:0 0 4px; font-size:1.8rem; }
+  header p { margin:0; color:var(--muted); }
+  nav { display:flex; gap:8px; margin:18px 0; border-bottom:1px solid var(--line); }
+  nav button { border:0; background:none; color:var(--muted); font:inherit; font-weight:600; padding:10px 14px; cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-1px; }
+  nav button[aria-selected=true] { color:var(--accent); border-color:var(--accent); }
+  input[type=search] { width:100%; padding:10px 14px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--text); font:inherit; }
+  .pills { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 20px; }
+  .pill { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:6px 14px; font:inherit; font-size:.9rem; cursor:pointer; }
+  .pill[aria-pressed=true] { background:var(--accent); color:var(--accent-text); border-color:var(--accent); }
+  .pill small { opacity:.7; margin-left:4px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:14px; list-style:none; margin:0; padding:0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; display:flex; gap:12px; align-items:center; }
+  .card.playing { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+  .card img, .ph { width:56px; height:56px; border-radius:50%; object-fit:cover; flex:none; background:var(--line); }
+  .meta { min-width:0; flex:1; }
+  .card h2 { margin:0; font-size:1rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .card p { margin:0; color:var(--muted); font-size:.85rem; }
+  .play { flex:none; width:40px; height:40px; border-radius:50%; border:0; background:var(--accent); color:var(--accent-text); font-size:16px; cursor:pointer; display:grid; place-items:center; text-decoration:none; }
+  .empty { text-align:center; color:var(--muted); padding:48px 0; }
+  .note { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; color:var(--muted); font-size:.9rem; margin-bottom:16px; }
+  section.panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:4px 20px 20px; margin-bottom:16px; }
+  h3 { margin:20px 0 8px; font-size:1.05rem; }
+  pre { background:var(--code); border-radius:10px; padding:12px 14px; overflow:auto; font:13px/1.5 ui-monospace,Consolas,monospace; margin:8px 0; }
+  code { background:var(--code); padding:2px 6px; border-radius:6px; font-size:.88em; }
+  pre code { background:none; padding:0; }
+  .copy, .btn { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:8px; padding:5px 12px; font:inherit; font-size:.88rem; cursor:pointer; text-decoration:none; display:inline-block; }
+  .urlrow { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .urlrow code { flex:1; min-width:0; overflow:auto; white-space:nowrap; padding:8px 10px; }
+  table { border-collapse:collapse; width:100%; font-size:.92rem; }
+  td, th { text-align:left; padding:6px 10px 6px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  footer { color:var(--muted); font-size:.9rem; padding:24px 0; }
+  #player { position:fixed; left:0; right:0; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:12px 16px; display:none; }
+  #player.on { display:block; }
+  #player .row { max-width:1080px; margin:0 auto; display:flex; gap:12px; align-items:center; }
+  #player audio { flex:1; min-width:0; height:36px; }
+  #now { font-weight:600; max-width:30%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  #err { color:#d92d20; font-size:.85rem; }
+  [hidden] { display:none !important; }
+  @media (max-width:600px) { #now { display:none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Nepali Radio List</h1>
+    <p id="sub">Loading stations…</p>
+  </header>
+
+  <nav role="tablist">
+    <button role="tab" id="tab-listen" aria-selected="true">Listen</button>
+    <button role="tab" id="tab-api" aria-selected="false">API / Data</button>
+  </nav>
+
+  <!-- Listen -->
+  <div id="view-listen">
+    <input type="search" id="q" placeholder="Search by name, place or frequency" aria-label="Search stations">
+    <div class="pills" id="pills"></div>
+    <div class="note" id="httpsNote" hidden>This page is on https, so browsers block plain <code>http://</code> streams. Those stations show a ↗ button that opens the stream in a new tab instead.</div>
+    <ul class="grid" id="list"></ul>
+    <p class="empty" id="empty" hidden>No station matches your search.</p>
+  </div>
+
+  <!-- API -->
+  <div id="view-api" hidden>
+    <section class="panel">
+      <h3>Get the data</h3>
+      <p>All stations are in one plain JSON file. No key, no sign-up.</p>
+      <div class="urlrow"><code id="dataUrl"></code><button class="copy" data-copy-id="dataUrl">Copy</button></div>
+      <p>
+        <a class="btn" id="dlJson" download="nepali-radios.json">Download JSON</a>
+        <button class="btn" id="dlCsv">Download CSV</button>
+      </p>
+      <p style="color:var(--muted);font-size:.9rem">Each station: <code>id</code>, <code>name</code>, <code>province</code>, <code>frequency</code>, <code>address</code>, <code>stream_url</code>, <code>logo</code> (path under <code>public/</code>), <code>online</code>, <code>checked_at</code>.
+        Provinces: Koshi, Madhesh, Bagmati, Gandaki, Lumbini, Karnali, Sudurpashchim, World (outside Nepal).</p>
+
+      <h3>Use it in your code</h3>
+      <p>JavaScript</p>
+      <pre><code id="exJs"></code></pre>
+      <p>Python</p>
+      <pre><code id="exPy"></code></pre>
+      <p>PHP</p>
+      <pre><code id="exPhp"></code></pre>
+      <p>curl + jq</p>
+      <pre><code id="exCurl"></code></pre>
+    </section>
+
+    <section class="panel">
+      <h3>Want filtering and paging? Run the PHP version</h3>
+      <p>The repository also has a small PHP app with a real API (filters, search, paging, CORS):</p>
+      <pre><code>php -S localhost:8000 -t public public/index.php</code></pre>
+      <table>
+        <tr><th>Endpoint</th><th>Returns</th></tr>
+        <tr><td><code>/api/radios</code></td><td>stations; <code>?province=</code> <code>&amp;q=</code> <code>&amp;limit=</code> <code>&amp;offset=</code> <code>&amp;online=all</code></td></tr>
+        <tr><td><code>/api/radios/{id}</code></td><td>one station</td></tr>
+        <tr><td><code>/api/provinces</code></td><td>provinces with station counts</td></tr>
+        <tr><td><code>/api/radios.csv</code></td><td>the whole list as CSV</td></tr>
+      </table>
+    </section>
+  </div>
+
+  <footer>Station names and logos belong to their owners. Streams can go offline; <a href="https://github.com/sandeshpanta/nepali-radio-list">the project is on GitHub</a>.</footer>
+</div>
+
+<div id="player">
+  <div class="row"><span id="now"></span><audio id="audio" controls></audio><span id="err"></span></div>
+</div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var DATA_URL = new URL('data/radios.json', location.href).href;
+  var LOGO_BASE = new URL('public/', location.href).href;
+  var ORDER = ['Koshi', 'Madhesh', 'Bagmati', 'Gandaki', 'Lumbini', 'Karnali', 'Sudurpashchim', 'World'];
+  var stations = [], province = '', cards = [], playingCard = null;
+  var secure = location.protocol === 'https:';
+
+  // tabs
+  function show(tab) {
+    $('view-listen').hidden = tab !== 'listen';
+    $('view-api').hidden = tab !== 'api';
+    $('tab-listen').setAttribute('aria-selected', tab === 'listen');
+    $('tab-api').setAttribute('aria-selected', tab === 'api');
+    history.replaceState(null, '', '#' + tab);
+  }
+  $('tab-listen').onclick = function () { show('listen'); };
+  $('tab-api').onclick = function () { show('api'); };
+
+  // API tab
+  $('dataUrl').textContent = DATA_URL;
+  $('dlJson').href = DATA_URL;
+  $('exJs').textContent = "const res = await fetch('" + DATA_URL + "');\nconst { stations } = await res.json();\nconst bagmati = stations.filter(s => s.province === 'Bagmati');";
+  $('exPy').textContent = "import requests\nstations = requests.get('" + DATA_URL + "').json()['stations']\nprint(len(stations), stations[0]['name'], stations[0]['stream_url'])";
+  $('exPhp').textContent = "$json = json_decode(file_get_contents('" + DATA_URL + "'), true);\nforeach ($json['stations'] as $s) {\n    echo $s['name'], ' - ', $s['stream_url'], PHP_EOL;\n}";
+  $('exCurl').textContent = "curl -s " + DATA_URL + " | jq '.stations[] | select(.province==\"Gandaki\") | .name'";
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-copy-id]'); if (!b) return;
+    var text = $(b.dataset.copyId).textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+      b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500);
+    }, function () { window.prompt('Copy this:', text); });
+  });
+  $('dlCsv').onclick = function () {
+    var cols = ['id', 'name', 'province', 'frequency', 'address', 'stream_url', 'online', 'checked_at'];
+    var esc = function (v) { v = v == null ? '' : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+    var csv = '﻿' + cols.join(',') + '\n' + stations.map(function (s) { return cols.map(function (c) { return esc(s[c]); }).join(','); }).join('\n');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+    a.download = 'nepali-radios.csv'; a.click();
+  };
+
+  // Listen tab
+  function render() {
+    var list = $('list');
+    cards = stations.map(function (s) {
+      var li = document.createElement('li'); li.className = 'card';
+      li.dataset.province = s.province;
+      li.dataset.search = (s.name + ' ' + (s.address || '') + ' ' + (s.frequency || '')).toLowerCase();
+      var img;
+      if (s.logo) { img = document.createElement('img'); img.src = LOGO_BASE + s.logo; img.alt = ''; img.loading = 'lazy'; img.width = img.height = 56; }
+      else { img = document.createElement('span'); img.className = 'ph'; }
+      var meta = document.createElement('div'); meta.className = 'meta';
+      var h = document.createElement('h2'); h.textContent = s.name; h.title = s.name;
+      var p = document.createElement('p'); p.textContent = s.province + (s.frequency ? ' · ' + s.frequency + ' MHz' : '');
+      meta.append(h, p);
+      var btn;
+      if (secure && s.stream_url.indexOf('http://') === 0) {
+        btn = document.createElement('a'); btn.href = s.stream_url; btn.target = '_blank'; btn.rel = 'noopener';
+        btn.textContent = '↗'; btn.title = 'Open the stream in a new tab'; $('httpsNote').hidden = false;
+      } else {
+        btn = document.createElement('button'); btn.textContent = '▶'; btn.setAttribute('aria-label', 'Play ' + s.name);
+        btn.onclick = function () { play(s, li); };
+      }
+      btn.classList.add('play');
+      li.append(img, meta, btn);
+      list.append(li);
+      return li;
+    });
+    var counts = {}; stations.forEach(function (s) { counts[s.province] = (counts[s.province] || 0) + 1; });
+    var pills = $('pills'); pills.innerHTML = '';
+    [''].concat(ORDER.filter(function (p) { return counts[p]; })).forEach(function (p) {
+      var b = document.createElement('button'); b.className = 'pill'; b.dataset.p = p;
+      b.setAttribute('aria-pressed', p === '');
+      b.innerHTML = (p || 'All') + '<small>' + (p ? counts[p] : stations.length) + '</small>';
+      pills.append(b);
+    });
+  }
+  function filter() {
+    var term = $('q').value.trim().toLowerCase(), shown = 0;
+    cards.forEach(function (c) {
+      var ok = (!province || c.dataset.province === province) && (!term || c.dataset.search.indexOf(term) > -1);
+      c.hidden = !ok; if (ok) shown++;
+    });
+    $('empty').hidden = shown > 0;
+  }
+  $('q').addEventListener('input', filter);
+  $('pills').addEventListener('click', function (ev) {
+    var b = ev.target.closest('.pill'); if (!b) return;
+    province = b.dataset.p;
+    [].forEach.call(document.querySelectorAll('.pill'), function (p) { p.setAttribute('aria-pressed', p === b); });
+    filter();
+  });
+
+  var audio = $('audio');
+  function play(s, li) {
+    $('err').textContent = ''; $('now').textContent = s.name; $('player').classList.add('on');
+    if (playingCard) playingCard.classList.remove('playing');
+    playingCard = li; li.classList.add('playing');
+    audio.src = s.stream_url;
+    audio.play().catch(function () { $('err').textContent = 'Could not play this stream.'; });
+  }
+  audio.addEventListener('error', function () { $('err').textContent = 'Could not play this stream.'; });
+
+  // load
+  fetch(DATA_URL).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+    stations = d.stations.filter(function (s) { return s.online !== false; });
+    $('sub').textContent = stations.length + ' live stations, streams checked on ' + d.updated + '.';
+    render();
+    show(location.hash === '#api' ? 'api' : 'listen');
+  }).catch(function () {
+    $('sub').textContent = 'Could not load data/radios.json. Opening this file directly does not work; use the GitHub Pages address, or run: python -m http.server';
+  });
+})();
+</script>
+</body>
+</html>
