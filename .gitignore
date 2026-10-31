@@ -1,0 +1,7 @@
+# Old working files from the first clean-up (raw list, check output, one-off scripts)
+_workfiles/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+Thumbs.db

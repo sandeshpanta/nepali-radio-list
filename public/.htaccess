@@ -1,0 +1,4 @@
+# Apache: send everything that is not a real file (logos, css) to index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
